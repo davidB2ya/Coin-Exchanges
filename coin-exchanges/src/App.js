@@ -1,10 +1,17 @@
-import SocialCard from './components/SocialCard';
+import { Routes, Route } from "react-router-dom";
 import './sass/app.scss';
+import Home from './views/Home/Home';
+import Login from './views/Login/Login';
 
 function App() {
   return (
     <div className="App">
-      <SocialCard/>
+      <Routes>
+        <Route path= '/' element={<Home/>} exact/>
+        <Route path= '/home' element={<Home/>} exact/>
+        <Route path= '/login' element={<Login/>} exact/>
+  
+      </Routes>
     </div>
   );
 }
