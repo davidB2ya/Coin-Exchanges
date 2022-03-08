@@ -58,7 +58,6 @@ loginRouter.post('/', async (req, res) => {
         const { email, password } = req.body;
 
         const user = await User.findOne({ email });
-        console.log(user)
 
         const isMatch = user === null ? false : await bcrypt.compare(password, user.passwordHash);
 
