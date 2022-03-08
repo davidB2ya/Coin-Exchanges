@@ -22,7 +22,7 @@ registerRouter.post('/', async (req, res) => {
             return res.status(400).json({ msg: 'Invalid emails.' });
 
         const role = location.pathname = '/register' ? 1 : 2;
-        
+
         const user = await User.findOne({ email });
 
         if (user) return res.status(400).json({ msg: 'This email already exists.' });
@@ -41,7 +41,7 @@ registerRouter.post('/', async (req, res) => {
             role
         });
         console.log(newUser);
-        
+
         await newUser.save();
         res.json({ msg: 'User has been create!' });
     } catch (err) {
@@ -61,7 +61,7 @@ loginRouter.post('/', async (req, res) => {
         console.log(user)
 
         const isMatch = user === null ? false : await bcrypt.compare(password, user.passwordHash);
-        
+
         if (!isMatch) {
             return res.status(401).json({
                 error: 'Invalid password or user'

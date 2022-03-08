@@ -1,0 +1,49 @@
+{
+  "name": "cobrando-sas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "workspaces": [
+    "coin-exchanges",
+    "api"
+  ],
+  "engines": {
+    "npm":"7.23.0"
+  },
+  "scripts": {
+    "build": "SKIP_PREFLIGHT_CHECK=true npm run build --workspace=coin-exchanges",
+    "start": "npm run start --workspace=api",
+    "dev:api": "npm run build && npm run dev --workspace=api",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "eslintConfig": {
+    "ignorePatterns": "build",
+    "extends":[
+      "react-app",
+      "react-app/jest",
+      "./node_modules/standard/eslintrc.json"
+    ],
+    "env": {
+      "cypress/globals": true,
+      "jest": true
+    },
+    "plugins": [
+      "cypress"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidB2ya/Coin-Exchanges.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "David Bedoya (B2ya)",
+    "email": "dbedoya0408@gmail.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidB2ya/Coin-Exchanges/issues"
+  },
+  "homepage": "https://github.com/davidB2ya/Coin-Exchanges#readme"
+}

@@ -1,0 +1,86 @@
+.CardCoin {
+    display       : flex;
+    flex-direction: column;
+    width         : 660px;
+    border        : solid 1px $blue_dark;
+    border-radius : 10px;
+    padding       : .2em .2em .2em 1em;
+    box-shadow    : 0px 8px 15px rgba(13, 69, 114, 0.2);
+    background    : $colorBackground;
+    cursor        : default;
+    margin-left   : 450px;
+    font-family   : $fontFredoka;
+    font-size     : 16px;
+    font-weight   : 600;
+    letter-spacing: 1px;
+    margin-bottom : 2em;
+
+    .ContainerCard {
+        display    : flex;
+        align-items: center;
+        gap        : 1em;
+    }
+
+    .is-invalid {
+        display   : none;
+        transition: all 0.5s ease 0s;
+    }
+
+    .is-valid {
+        display: content;
+    }
+
+    .percent {
+        display   : flex;
+        margin-top: .1em;
+
+        .btnDown svg {
+            color    : $redDown;
+            font-size: 20px;
+        }
+
+        .btnUp svg {
+            color    : $greenUp;
+            font-size: 20px;
+        }
+    }
+
+    .btnArrow {
+        display   : flex;
+        position  : absolute;
+        left      : 1090px;
+        border    : none;
+        background: transparent;
+        font-size : 22px;
+        color     : $blue_dark;
+        cursor    : pointer;
+        outline   : none;
+    }
+
+    .input_price {
+        position     : absolute;
+        left         : 50px;
+        width        : 70px;
+        outline      : none;
+        border-radius: 5px;
+        border       : 1px solid $primary;
+    }
+
+    .ArrowsExchange {
+        font-size: 24px;
+        color    : rgb(141, 16, 16);
+        position : absolute;
+        left     : 880px;
+    }
+
+    .USD {
+        position: absolute;
+        left    : 920px;
+    }
+
+    .symbol {
+        position: absolute;
+        left    : 740px;
+    }
+
+}

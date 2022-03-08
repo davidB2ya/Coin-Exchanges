@@ -1,0 +1,28 @@
+.NavBar {
+    display        : flex;
+    justify-content: space-between;
+    padding        : 1em;
+    align-items    : center;
+    margin-left    : 450px;
+    font-family    : $fontFredoka;
+    font-size      : 25px;
+    font-weight    : 600;
+    letter-spacing : 1px;
+    cursor         : default;
+
+    span {
+        font-size: 16px;
+
+        a {
+            color          : $primary;
+            outline        : none;
+            text-decoration: none;
+        }
+
+    }
+
+    h2 {
+        font-size  : 22px;
+        font-family: $fontRedressed;
+    }
+}

@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import '../../sass/app.scss';
-import ImgCriptos from '../../assets/images (1).jfif'
+import React, { useState } from 'react'
+import { useLocation } from 'react-router-dom';
+import ImgCriptos from '../../assets/descarga (2).jfif'
 
-const Login = () => {
+const Register = () => {
 
-    const navigate = useNavigate();
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -13,9 +11,9 @@ const Login = () => {
 
     // const baseUrl = 'http://localhost:3005'
 
-    async function loginUser(event) {
+    async function registerUser(event) {
         event.preventDefault();
-        const response = await fetch(`/api/login`, {
+        const response = await fetch(`/api/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -30,23 +28,14 @@ const Login = () => {
 
         const data = await response.json();
         console.log(data);
-
-        if (data.msg === 'Login success!') {
-            navigate("/dashboard")
-        } else {
-            alert("Ingreso fallido")
-        }
-    }
-    async function registerUser() {
-        navigate("/register")
     }
 
     return (
         <div className='Login'>
             <div className='Card_Login'>
                 <img src={ImgCriptos} alt="img criptos" ></img>
-                <h1>Entrar</h1>
-                <form onSubmit={loginUser}>
+                <h1>Registrarse</h1>
+                <form onSubmit={registerUser}>
                     <input
                         className="inputLogin"
                         value={name}
@@ -74,8 +63,8 @@ const Login = () => {
                         autoComplete='false'
                     />
                     <br />
-                    <button className="btn" onClick={loginUser}>Ingresar</button>
-                    <button className="btn" onClick={registerUser}>Registrarse</button>
+                    <button className="btn" onClick={registerUser}>Registrar</button>
+
 
                 </form>
             </div>
@@ -83,4 +72,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Register

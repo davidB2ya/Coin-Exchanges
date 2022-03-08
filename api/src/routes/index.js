@@ -6,8 +6,8 @@ const LoginRegisterControl = require('../controllers/loginRegisterControl')
 
 
 // Routes
-router.use('/api/register', LoginRegisterControl.registerRouter );
-router.use('/api/login', LoginRegisterControl.loginRouter );
+router.use('/api/register', LoginRegisterControl.registerRouter);
+router.use('/api/login', LoginRegisterControl.loginRouter);
 
 
 module.exports = router

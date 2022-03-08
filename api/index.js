@@ -15,10 +15,10 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(allRoutes);
-// app.use(express.static('../client/build'))
+app.use(express.static('../coin-exchanges/build'))
 
 // Setting
-const port = process.env.PORT || '3005'
+const port = process.env.PORT || '3001'
 
 // defines a port and passes the value to it
 app.set('port', port)
@@ -26,9 +26,9 @@ app.set('port', port)
 // Init Server
 app.listen(app.get('port'), error => {
     if (error) {
-    console.error('Server failed to start')
+        console.error('Server failed to start')
     } else {
-    console.log('Server started on port: ' + port)
+        console.log('Server started on port: ' + port)
     }
 })
 
