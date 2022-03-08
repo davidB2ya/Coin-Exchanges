@@ -11,8 +11,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const location = useLocation();
 
-    // const baseUrl = 'http://localhost:3005'
-
     async function loginUser(event) {
         event.preventDefault();
         const response = await fetch(`/api/login`, {
