@@ -23,6 +23,14 @@ npm run start
 open navigation http://localhost:3001/
 ``` 
 ***
+
+### Usuario de prueba  🙎🏻‍♂️
+
+nombre : David Bedoya
+correo :  adminDavid@gmail.com
+contraseña : 123456789
+
+***
 ### Pre-requisitos 📋
 
 Node instalado
@@ -36,14 +44,6 @@ _Aquí debajo dejo el link del proyecto desplegado_
 https://coin-exchanges-b2ya.herokuapp.com
 ***
 
-## Expresiones de Gratitud 🎁
-
-* Comenta a otros sobre nuestro proyecto 📢
-* Invita una cerveza 🍺 o un café ☕️ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
-
-***
 ### Librerías Usadas
 
 * **axios** : **_La utilizo para consultas a la api_**
@@ -55,4 +55,10 @@ https://coin-exchanges-b2ya.herokuapp.com
 * **recharts** : **_La uso para renderizar componentes gráficos con React.js_**
 * **bcrypt** : **_La uso para encriptar las contraseñas_**
 
- 
+***
+ ## Expresiones de Gratitud 🎁
+
+* Comenta a otros sobre mi proyecto 📢
+* Invitame a una cerveza 🍺 o un café ☕️  
+* Da las gracias públicamente 🤓
+* etc.

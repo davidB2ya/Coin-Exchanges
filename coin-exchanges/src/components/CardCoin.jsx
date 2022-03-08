@@ -7,6 +7,7 @@ import { ImCoinDollar } from 'react-icons/im'
 import { TiArrowDownThick, TiArrowUpThick } from 'react-icons/ti'
 import { CgArrowsExchangeAlt } from 'react-icons/cg'
 import '../sass/app.scss';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 // import axios from 'axios'
 
 const CardCoin = ({ data }) => {
@@ -49,6 +50,51 @@ const CardCoin = ({ data }) => {
             icon: <SiBitcoincash />,
         }
     ]
+
+    const dataGrafic = [
+        {
+            name: 'Page A',
+            uv: 4000,
+            pv: 2400,
+            amt: 2400,
+        },
+        {
+            name: 'Page B',
+            uv: 3000,
+            pv: 1398,
+            amt: 2210,
+        },
+        {
+            name: 'Page C',
+            uv: 2000,
+            pv: 9800,
+            amt: 2290,
+        },
+        {
+            name: 'Page D',
+            uv: 2780,
+            pv: 3908,
+            amt: 2000,
+        },
+        {
+            name: 'Page E',
+            uv: 1890,
+            pv: 4800,
+            amt: 2181,
+        },
+        {
+            name: 'Page F',
+            uv: 2390,
+            pv: 3800,
+            amt: 2500,
+        },
+        {
+            name: 'Page G',
+            uv: 3490,
+            pv: 4300,
+            amt: 2100,
+        },
+    ];
 
     // useEffect(() => {
     //     axios({
@@ -116,11 +162,34 @@ const CardCoin = ({ data }) => {
                     </button>}
             </div>
             <div className={`${stateButton ? 'is-valid' : 'is-invalid'}`}>
-                <span className="percent">Variación última hora: {percent_change_1h < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_1h}%</span>
-                <br />
-                <span className="percent">Variación últimas 24 hs: {percent_change_24h < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_24h}%</span>
-                <br />
-                <span className="percent">Variación últimos 7 días: {percent_change_7d < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_7d}%</span>
+                <div>
+                    <span className="percent">Variación última hora: {percent_change_1h < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_1h}%</span>
+                    <br />
+                    <span className="percent">Variación últimas 24 hs: {percent_change_24h < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_24h}%</span>
+                    <br />
+                    <span className="percent">Variación últimos 7 días: {percent_change_7d < 0 ? <div className="btnDown"><TiArrowDownThick /></div> : <div className="btnUp"><TiArrowUpThick /></div>} {percent_change_7d}%</span>
+                </div>
+                <div>
+                    <ResponsiveContainer width="100%" height="100%">
+                        <AreaChart
+                            width={500}
+                            height={400}
+                            data={dataGrafic}
+                            margin={{
+                                top: 10,
+                                right: 30,
+                                left: 500,
+                                bottom: 0,
+                            }}
+                        >
+                            <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+                        </AreaChart>
+                    </ResponsiveContainer>
+                </div>
             </div>
         </div>
     )
