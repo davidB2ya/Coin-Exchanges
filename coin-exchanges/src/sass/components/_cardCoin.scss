@@ -27,7 +27,10 @@
     }
 
     .is-valid {
-        display: content;
+        display: flex;
+        .grafic{
+            margin-left: 2em;
+        }
     }
 
     .percent {

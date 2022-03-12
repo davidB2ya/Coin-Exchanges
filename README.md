@@ -85,5 +85,7 @@ https://coin-exchanges-b2ya.herokuapp.com
 * Da las gracias públicamente 🤓
 * etc.
 
+---
+⌨️ con ❤️ por [davidB2ya](https://github.com/davidB2ya) 😊👍🏻
 
 ![Image text](https://i.ibb.co/2M675j0/Logo-David-04.png)
